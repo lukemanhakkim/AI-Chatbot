@@ -1,0 +1,37 @@
+slots:
+  location:
+    type: text
+  newstories:
+    type: text
+
+intents:
+ - greet
+ - goodbye
+ - inform
+ - informnews
+entities:
+ - location
+ - newstories
+
+templates:
+  utter_greet:
+    - 'Hello! How can I help?'
+  utter_goodbye:
+    - 'Talk to you later.'
+    - 'Bye bye :('
+  utter_ask_location:
+    - 'In what location?'
+  utter_ask_newstories:
+    - 'What news stories you want at the moment?'
+
+
+
+actions:
+ - utter_greet
+ - utter_goodbye
+ - utter_ask_location
+ - utter_ask_newstories
+ - actions.ActionWeather
+ - actions.ActionNews
+ - actions.ResetSlot
+
